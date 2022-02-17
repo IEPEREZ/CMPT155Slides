@@ -1,0 +1,4 @@
+\beamer@sectionintoc {1}{Selections}{3}{0}{1}
+\beamer@sectionintoc {2}{Data Manipulation}{5}{0}{2}
+\beamer@sectionintoc {3}{Exercise}{9}{0}{3}
+\beamer@sectionintoc {4}{Find and Replace}{10}{0}{4}

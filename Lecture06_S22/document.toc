@@ -1,0 +1,5 @@
+\beamer@sectionintoc {1}{Creating Basic Formulas}{3}{0}{1}
+\beamer@sectionintoc {2}{Exercises}{7}{0}{2}
+\beamer@sectionintoc {3}{Cell Ranges}{11}{0}{3}
+\beamer@sectionintoc {4}{Functions and Formulas}{13}{0}{4}
+\beamer@sectionintoc {5}{Testing/Error Analysis}{16}{0}{5}

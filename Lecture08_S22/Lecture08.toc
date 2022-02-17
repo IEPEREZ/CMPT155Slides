@@ -1,0 +1,7 @@
+\beamer@sectionintoc {1}{Creating Charts}{3}{0}{1}
+\beamer@sectionintoc {2}{Managing Charts with Multiple Series}{8}{0}{2}
+\beamer@sectionintoc {3}{Managing Chart Elements}{11}{0}{3}
+\beamer@sectionintoc {4}{Exercise 1: Creating Simple Charts}{14}{0}{4}
+\beamer@sectionintoc {5}{3-D Charts}{16}{0}{5}
+\beamer@sectionintoc {6}{Pie Charts}{17}{0}{6}
+\beamer@sectionintoc {7}{Further Reading}{19}{0}{7}
