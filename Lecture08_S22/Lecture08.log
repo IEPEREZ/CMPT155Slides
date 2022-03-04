@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.11)  17 FEB 2022 13:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.11)  17 FEB 2022 19:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1309,22 +1309,22 @@ Overfull \hbox (19.23224pt too wide) has occurred while \output is active
 <images//Exercise1Bar.png, id=439, 396.39pt x 222.723pt>
 File: images//Exercise1Bar.png Graphic file (type png)
 <use images//Exercise1Bar.png>
-Package pdftex.def Info: images//Exercise1Bar.png  used on input line 272.
+Package pdftex.def Info: images//Exercise1Bar.png  used on input line 273.
 (pdftex.def)             Requested size: 153.31197pt x 86.14453pt.
 <images//Exercise1Pie.png, id=440, 397.485pt x 222.723pt>
 File: images//Exercise1Pie.png Graphic file (type png)
 <use images//Exercise1Pie.png>
-Package pdftex.def Info: images//Exercise1Pie.png  used on input line 272.
+Package pdftex.def Info: images//Exercise1Pie.png  used on input line 273.
 (pdftex.def)             Requested size: 153.31197pt x 85.90663pt.
 <images//Exercise1ByRoom.png, id=441, 363.321pt x 219.657pt>
 File: images//Exercise1ByRoom.png Graphic file (type png)
 <use images//Exercise1ByRoom.png>
-Package pdftex.def Info: images//Exercise1ByRoom.png  used on input line 272.
+Package pdftex.def Info: images//Exercise1ByRoom.png  used on input line 273.
 (pdftex.def)             Requested size: 137.97984pt x 83.42024pt.
 <images//Exercise1ByGender.png, id=442, 360.255pt x 219.657pt>
 File: images//Exercise1ByGender.png Graphic file (type png)
 <use images//Exercise1ByGender.png>
-Package pdftex.def Info: images//Exercise1ByGender.png  used on input line 272.
+Package pdftex.def Info: images//Exercise1ByGender.png  used on input line 273.
 
 (pdftex.def)             Requested size: 137.97984pt x 84.1308pt.
 
@@ -1378,27 +1378,24 @@ Package rerunfilecheck Info: File `Lecture08.out' has not changed.
 (rerunfilecheck)             Checksum: 76F38A94A2AB0FE122083E2DDC5B88C7;1058.
  ) 
 Here is how much of TeX's memory you used:
- 25074 strings out of 478994
- 478786 string characters out of 5858183
- 773005 words of memory out of 5000000
- 41966 multiletter control sequences out of 15000+600000
+ 25071 strings out of 478994
+ 478758 string characters out of 5858183
+ 772970 words of memory out of 5000000
+ 41964 multiletter control sequences out of 15000+600000
  412185 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  131i,15n,132p,432b,653s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{Navigation20} has been referenced but does not ex
-ist, replaced by a fixed one
-
-</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb><
-/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></
-usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></u
-sr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr
-/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb></usr
-/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
-local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb>
-Output written on Lecture08.pdf (19 pages, 598576 bytes).
+</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb
+></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb>
+</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb><
+/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></u
+sr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb></u
+sr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></us
+r/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb>
+Output written on Lecture08.pdf (19 pages, 598878 bytes).
 PDF statistics:
- 614 PDF objects out of 1000 (max. 8388607)
- 559 compressed objects within 6 object streams
- 47 named destinations out of 1000 (max. 500000)
+ 613 PDF objects out of 1000 (max. 8388607)
+ 558 compressed objects within 6 object streams
+ 46 named destinations out of 1000 (max. 500000)
  141 words of extra memory for PDF output out of 10000 (max. 10000000)
 

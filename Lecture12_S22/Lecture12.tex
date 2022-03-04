@@ -1,0 +1,161 @@
+\documentclass[12pt]{beamer}
+\usetheme{Boadilla}
+\usepackage{graphicx}
+\usepackage{algorithm2e}
+\graphicspath{{images/}}
+\title{CMPT 155: Computer Applications for Life Sciences}
+\subtitle{Lecture 10: Discrete Probability}
+\author{Ivan E. Perez}
+\institute{}
+\date{February 11, 2022}
+\usepackage{booktabs} % Allows the use of \toprule, 
+\usepackage{appendix}
+\usepackage{enumerate,multicol}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{tikz}
+\usepackage{amsxtra}
+\begin{document}
+	
+	\begin{frame}
+		\titlepage
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Presentation Outline}
+		\tableofcontents
+	\end{frame}
+	\section{Homework \& Administrative}
+	
+	\begin{frame}
+		\frametitle{Homework \& Administrative Schedule}
+		\begin{itemize}
+			\item Homework 2 Due: Tuesday, February $22^{\text{nd}}$ at 6pm
+			\item Homework 3 Due: Tuesday, March $1^{\text{st}}$ at 6pm
+			\item First Midterm Review:  Wednesday, March $2^{\text{nd}}$
+			\item First Midterm Exam: Friday, March, $4^{\text{th}}$
+			
+		\end{itemize}
+	\end{frame}
+	\begin{frame}
+		\begin{itemize}
+			\item Event - 
+			\item Outcome 
+			\item Probability
+			\item Sample Space 
+		\end{itemize}	
+	\end{frame}		
+	\begin{frame}
+		\frametitle{Fundamentals of Probability}
+		Discrete probability is about measuring the subset of outcomes that satisfy the restriction amongst a broader set of outcomes.
+		 
+	\end{frame}
+	\begin{frame}
+		\frametitle{Some more concepts}
+	\end{frame}
+	\begin{frame}
+		\frametitle{Probability}
+	\end{frame}
+	\begin{frame}
+		\frametitle{Examples}
+	\end{frame}
+	\begin{frame}
+		\frametitle{Some Facts}
+	\end{frame}
+	\begin{frame}
+		\frametitle{Exercise 1: Probability of Rolling Fair Dice}
+		On a new spreadsheet layout all the possible outcomes of two rolles of a fair die.\\
+		Compute the following probabilities:
+		\begin{itemize}
+			\item outcome of the dice roll will add up to 7.
+			\item outcome of the dice roll will add up to 8 or more.
+		\end{itemize}
+	\end{frame}
+	\begin{frame}
+		\frametitle{Exercise 1: Solution}
+		\begin{enumerate} 
+			\item Begin by filling Column A with the range of values that two dice can take
+			\item In column B list the ways each value can be observed by the dice, (e.g., 2 = snake eyes, or (1,1)) 
+			\item In Column C count the different ways each value can be observed by the dice.
+			\item In Column D compute the probability of each outcome by dividing count of the ways each outcome can be observed by the total count of all the different outcomes.
+		\end{enumerate}			
+		To compute probability ranges:
+		\begin{itemize}
+			\item  outcome of the dice roll will add up to 7.
+			\begin{itemize}
+				\item See Cell XXX
+			\end{itemize}
+			\item outcome of the dice roll will add up to 8 or more.
+			\begin{itemize}
+				\item Add up the computed probabilities in cells XX:XX
+			\end{itemize}
+		\end{itemize}
+	\end{frame}
+	\begin{frame}
+		\frametitle{Exercise 2a: Binomial Modelling of Emergency Room Arrivals}
+		\begin{enumerate}
+			\item In a new spreadsheet lay 
+		\end{enumerate}
+	\end{frame}
+	\begin{frame}
+		\frametitle{However...}
+	\end{frame}
+	\begin{frame}
+		\frametitle{Sequential Events}
+	\end{frame}
+	\begin{frame}
+		\frametitle{Binmial Probability}
+	\end{frame}
+	\begin{frame}
+		\frametitle{The BINOMDIST() function}
+	\end{frame}
+	\begin{frame}
+		\frametitle{Cumulative Distribution}
+	\end{frame}
+	\begin{frame}
+		\frametitle{Exercise 3: Smokers}
+		A local health department counsels patients coming to a clinic on cigarette smoking only if they are smokers. History has shown that about 27\% (i.e., 0.27) of patients are smokes when they first come to the clinic. Assume that the clinic will see 15 patients today.\\
+		\bigskip
+		\begin{enumerate}
+			\item Graph both Binomial probability distribution and the cumulative distribution.
+			\item Compute the following probabilities:
+				\begin{itemize}
+					\item \textit{Exactly} 10 people are smokers.
+					\item 10 people or more are smokers.
+					\item 5 or fewer people are smokers.
+					\item between 7 and 10 people (inclusive) are smokers.
+				\end{itemize}
+		\end{enumerate} 
+	\end{frame}
+	\begin{frame}
+		\frametitle{The Poisson Distribution}
+	\end{frame}
+	\begin{frame}
+		\frametitle{The POISSON() Function}
+	\end{frame}
+	\begin{frame}
+		\frametitle{Example: Counting Train Arrivals}
+	\end{frame}
+	\begin{frame}
+		\frametitle{Exercise 4: Hospital Supply Quality Control}
+		A hospital supply room manager found that on average about 2 gloves in a box are not usable.
+		 
+		\begin{enumerate}
+			\item Graph the probability and cumulative distributions for the Poisson distribution function with $\lambda = 2$ 
+			\item Set the probability/cumulative outputs as a number with 4 decimal places.
+			\item Experiment to see how many scores are needed to capture the sample space for the Poisson distribution function with $\lambda=2$. 
+			\item Compute the following probabilities:
+				\begin{itemize}
+					\item Only $1$ glove will be unusable.
+					\item Fewer than $5$ gloves will be unusable.
+					\item At least $2$ gloves will be unusable.
+				\end{itemize}
+		\end{enumerate}
+	\end{frame}
+	\begin{frame}
+		\frametitle{Exercise 4: Solution}
+	\end{frame}
+	\begin{frame}
+		\frametitle{Further Reading}
+		The topics covered in the lecture can be found in \textit{Compter Applications for Life Sciences} p. 63 - 74.
+	\end{frame}
+\end{document}
