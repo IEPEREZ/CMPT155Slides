@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.11)  10 FEB 2022 19:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.11)  7 JUN 2022 12:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1362,17 +1362,17 @@ Overfull \hbox (19.23224pt too wide) has occurred while \output is active
 [17
 
 ]
-Overfull \hbox (9.4515pt too wide) in paragraph at lines 296--296
+Overfull \hbox (6.18765pt too wide) in paragraph at lines 299--299
 []  
  []
 
 <images//VLOOKUPEx.png, id=521, 893.3375pt x 301.125pt>
 File: images//VLOOKUPEx.png Graphic file (type png)
 <use images//VLOOKUPEx.png>
-Package pdftex.def Info: images//VLOOKUPEx.png  used on input line 296.
+Package pdftex.def Info: images//VLOOKUPEx.png  used on input line 299.
 (pdftex.def)             Requested size: 306.62396pt x 103.35522pt.
 
-Overfull \vbox (4.90414pt too high) detected at line 296
+Overfull \vbox (4.90414pt too high) detected at line 299
  []
 
 
@@ -1391,11 +1391,11 @@ Overfull \hbox (19.23224pt too wide) has occurred while \output is active
 
 ]
 LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 
-324.
+327.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/base/ts1cmtt.fd
 File: ts1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-Overfull \hbox (16.41399pt too wide) in paragraph at lines 324--324
+Overfull \hbox (16.41399pt too wide) in paragraph at lines 327--327
 []  
  []
 
@@ -1407,7 +1407,7 @@ Overfull \hbox (19.23224pt too wide) has occurred while \output is active
 [20
 
 ]
-Overfull \hbox (7.98625pt too wide) in paragraph at lines 338--338
+Overfull \hbox (7.98625pt too wide) in paragraph at lines 341--341
 []  
  []
 
@@ -1429,10 +1429,10 @@ Overfull \hbox (19.23224pt too wide) has occurred while \output is active
 <images//Exercise3Soln.png, id=656, 863.225pt x 715.67375pt>
 File: images//Exercise3Soln.png Graphic file (type png)
 <use images//Exercise3Soln.png>
-Package pdftex.def Info: images//Exercise3Soln.png  used on input line 367.
+Package pdftex.def Info: images//Exercise3Soln.png  used on input line 370.
 (pdftex.def)             Requested size: 272.55751pt x 225.96259pt.
 
-Overfull \vbox (0.67825pt too high) detected at line 367
+Overfull \vbox (0.67825pt too high) detected at line 370
  []
 
 
@@ -1484,7 +1484,7 @@ r/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr
 /local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/
 local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></u
 sr/local/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on Lecture07.pdf (24 pages, 1074250 bytes).
+Output written on Lecture07.pdf (24 pages, 1074494 bytes).
 PDF statistics:
  763 PDF objects out of 1000 (max. 8388607)
  691 compressed objects within 7 object streams

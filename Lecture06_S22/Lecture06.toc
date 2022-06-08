@@ -3,4 +3,4 @@
 \beamer@sectionintoc {3}{Logical Operators}{7}{0}{3}
 \beamer@sectionintoc {4}{Functions and Formulas}{13}{0}{4}
 \beamer@sectionintoc {5}{Absolute Cell References}{16}{0}{5}
-\beamer@sectionintoc {6}{AND() Function, \& Nested Functions}{20}{0}{6}
+\beamer@sectionintoc {6}{AND() Function, \& Nested Functions}{21}{0}{6}

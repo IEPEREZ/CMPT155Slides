@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.11)  26 JAN 2022 17:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.11)  6 JUN 2022 12:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1189,19 +1189,19 @@ Overfull \hbox (19.23224pt too wide) has occurred while \output is active
 [2
 
 ]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 37.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 36.
 
  (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 37.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 36.
 
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on inp
-ut line 37.
+ut line 36.
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/ma
@@ -1210,12 +1210,8 @@ thkerncmss.
 <images//formatcellsmenu.png, id=92, 615.29875pt x 597.23125pt>
 File: images//formatcellsmenu.png Graphic file (type png)
 <use images//formatcellsmenu.png>
-Package pdftex.def Info: images//formatcellsmenu.png  used on input line 37.
+Package pdftex.def Info: images//formatcellsmenu.png  used on input line 36.
 (pdftex.def)             Requested size: 170.3478pt x 165.3372pt.
-
-Overfull \vbox (0.88618pt too high) detected at line 37
- []
-
 
 Overfull \hbox (19.23224pt too wide) has occurred while \output is active
  [][][][]  
@@ -1224,10 +1220,10 @@ Overfull \hbox (19.23224pt too wide) has occurred while \output is active
 [3
 
  <./images//formatcellsmenu.png>]
-<images//variouscellformats.png, id=123, 547.04375pt x 183.68625pt>
+<images//variouscellformats.png, id=124, 547.04375pt x 183.68625pt>
 File: images//variouscellformats.png Graphic file (type png)
 <use images//variouscellformats.png>
-Package pdftex.def Info: images//variouscellformats.png  used on input line 43.
+Package pdftex.def Info: images//variouscellformats.png  used on input line 42.
 
 (pdftex.def)             Requested size: 340.6956pt x 114.4pt.
 
@@ -1238,10 +1234,10 @@ Overfull \hbox (19.23224pt too wide) has occurred while \output is active
 [4
 
  <./images//variouscellformats.png>]
-<images//wraprotatetext.png, id=152, 224.84pt x 78.2925pt>
+<images//wraprotatetext.png, id=153, 224.84pt x 78.2925pt>
 File: images//wraprotatetext.png Graphic file (type png)
 <use images//wraprotatetext.png>
-Package pdftex.def Info: images//wraprotatetext.png  used on input line 65.
+Package pdftex.def Info: images//wraprotatetext.png  used on input line 64.
 (pdftex.def)             Requested size: 136.27615pt x 47.4549pt.
 
 Overfull \hbox (19.23224pt too wide) has occurred while \output is active
@@ -1252,15 +1248,15 @@ Overfull \hbox (19.23224pt too wide) has occurred while \output is active
 
  <./images//wraprotatetext.png>]
 LaTeX Font Info:    Trying to load font information for TS1+cmss on input line 
-80.
+79.
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/base/ts1cmss.fd
 File: ts1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-<images//cellformat_font_tab.png, id=182, 616.3025pt x 597.23125pt>
+<images//cellformat_font_tab.png, id=184, 616.3025pt x 597.23125pt>
 File: images//cellformat_font_tab.png Graphic file (type png)
 <use images//cellformat_font_tab.png>
-Package pdftex.def Info: images//cellformat_font_tab.png  used on input line 80
+Package pdftex.def Info: images//cellformat_font_tab.png  used on input line 79
 .
 (pdftex.def)             Requested size: 170.3478pt x 165.07294pt.
 
@@ -1271,17 +1267,17 @@ Overfull \hbox (19.23224pt too wide) has occurred while \output is active
 [6
 
  <./images//cellformat_font_tab.png>]
-<images//cellformat_border_tab.png, id=211, 622.325pt x 601.24625pt>
+<images//cellformat_border_tab.png, id=213, 622.325pt x 601.24625pt>
 File: images//cellformat_border_tab.png Graphic file (type png)
 <use images//cellformat_border_tab.png>
 Package pdftex.def Info: images//cellformat_border_tab.png  used on input line 
-100.
+99.
 (pdftex.def)             Requested size: 125.20702pt x 120.9627pt.
-<images//cellformat_fill_tab.png, id=212, 622.325pt x 599.23875pt>
+<images//cellformat_fill_tab.png, id=214, 622.325pt x 599.23875pt>
 File: images//cellformat_fill_tab.png Graphic file (type png)
 <use images//cellformat_fill_tab.png>
-Package pdftex.def Info: images//cellformat_fill_tab.png  used on input line 10
-0.
+Package pdftex.def Info: images//cellformat_fill_tab.png  used on input line 99
+.
 (pdftex.def)             Requested size: 127.76083pt x 123.01846pt.
 
 Overfull \hbox (19.23224pt too wide) has occurred while \output is active
@@ -1291,11 +1287,11 @@ Overfull \hbox (19.23224pt too wide) has occurred while \output is active
 [7
 
  <./images//cellformat_border_tab.png> <./images//cellformat_fill_tab.png>]
-<images//conditionalformatting.png, id=241, 509.905pt x 244.915pt>
+<images//conditionalformatting.png, id=243, 509.905pt x 244.915pt>
 File: images//conditionalformatting.png Graphic file (type png)
 <use images//conditionalformatting.png>
 Package pdftex.def Info: images//conditionalformatting.png  used on input line 
-113.
+112.
 (pdftex.def)             Requested size: 170.3478pt x 81.81999pt.
 
 Overfull \hbox (19.23224pt too wide) has occurred while \output is active
@@ -1312,10 +1308,10 @@ Overfull \hbox (19.23224pt too wide) has occurred while \output is active
 [9
 
 ]
-<images//freezepanes.png, id=296, 253.94875pt x 87.32625pt>
+<images//freezepanes.png, id=297, 253.94875pt x 87.32625pt>
 File: images//freezepanes.png Graphic file (type png)
 <use images//freezepanes.png>
-Package pdftex.def Info: images//freezepanes.png  used on input line 151.
+Package pdftex.def Info: images//freezepanes.png  used on input line 150.
 (pdftex.def)             Requested size: 136.27615pt x 46.86365pt.
 
 Overfull \hbox (19.23224pt too wide) has occurred while \output is active
@@ -1325,10 +1321,10 @@ Overfull \hbox (19.23224pt too wide) has occurred while \output is active
 [10
 
  <./images//freezepanes.png>]
-<images//printmenu.png, id=323, 735.74875pt x 568.1225pt>
+<images//printmenu.png, id=324, 735.74875pt x 568.1225pt>
 File: images//printmenu.png Graphic file (type png)
 <use images//printmenu.png>
-Package pdftex.def Info: images//printmenu.png  used on input line 169.
+Package pdftex.def Info: images//printmenu.png  used on input line 168.
 (pdftex.def)             Requested size: 170.3478pt x 131.5323pt.
 
 Overfull \hbox (19.23224pt too wide) has occurred while \output is active
@@ -1349,14 +1345,14 @@ Overfull \hbox (19.23224pt too wide) has occurred while \output is active
 
  (./Lecture_04_S22.aux)
 Package rerunfilecheck Info: File `Lecture_04_S22.out' has not changed.
-(rerunfilecheck)             Checksum: AA2BC39B0813205D28CF267AA53DD442;335.
+(rerunfilecheck)             Checksum: 569CE83C23A6F67964DD72EB9907AC10;424.
  ) 
 Here is how much of TeX's memory you used:
- 25035 strings out of 478994
- 479319 string characters out of 5858183
+ 25037 strings out of 478994
+ 479345 string characters out of 5858183
  770394 words of memory out of 5000000
- 41943 multiletter control sequences out of 15000+600000
- 414178 words of font info for 65 fonts, out of 8000000 for 9000
+ 41944 multiletter control sequences out of 15000+600000
+ 414534 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  131i,15n,132p,437b,662s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
@@ -1364,14 +1360,15 @@ Here is how much of TeX's memory you used:
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb><
 /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></
 usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></us
+r/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></us
 r/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb></us
 r/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
 /local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></
 usr/local/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfss1095.pfb>
-Output written on Lecture_04_S22.pdf (11 pages, 1669243 bytes).
+Output written on Lecture_04_S22.pdf (11 pages, 1677484 bytes).
 PDF statistics:
- 387 PDF objects out of 1000 (max. 8388607)
- 335 compressed objects within 4 object streams
+ 391 PDF objects out of 1000 (max. 8388607)
+ 338 compressed objects within 4 object streams
  26 named destinations out of 1000 (max. 500000)
  124 words of extra memory for PDF output out of 10000 (max. 10000000)
 

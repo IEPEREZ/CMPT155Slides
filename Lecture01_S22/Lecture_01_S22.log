@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.11)  18 JAN 2022 13:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.11)  6 JUN 2022 10:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1311,7 +1311,7 @@ Overfull \hbox (66.10881pt too wide) has occurred while \output is active
 [15
 
 ]
-<images//cancerdeathper100k.png, id=437, 696.35156pt x 405.01312pt>
+<images//cancerdeathper100k.png, id=436, 696.35156pt x 405.01312pt>
 File: images//cancerdeathper100k.png Graphic file (type png)
 <use images//cancerdeathper100k.png>
 Package pdftex.def Info: images//cancerdeathper100k.png  used on input line 175
@@ -1325,13 +1325,6 @@ Overfull \hbox (66.10881pt too wide) has occurred while \output is active
 [16
 
  <./images//cancerdeathper100k.png>]
-Overfull \hbox (66.10881pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[17
-
-]
 \tf@nav=\write6
 \openout6 = `Lecture_01_S22.nav'.
 
@@ -1346,10 +1339,10 @@ Package rerunfilecheck Info: File `Lecture_01_S22.out' has not changed.
 (rerunfilecheck)             Checksum: E0DDED769F3B601D9E73A85D682F73DD;366.
  ) 
 Here is how much of TeX's memory you used:
- 24986 strings out of 478994
- 477665 string characters out of 5858183
+ 24982 strings out of 478994
+ 477630 string characters out of 5858183
  768636 words of memory out of 5000000
- 41890 multiletter control sequences out of 15000+600000
+ 41888 multiletter control sequences out of 15000+600000
  415549 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  131i,15n,132p,437b,655s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1362,10 +1355,10 @@ r/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></u
 sr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi17.pfb></u
 sr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb
 >
-Output written on Lecture_01_S22.pdf (17 pages, 239399 bytes).
+Output written on Lecture_01_S22.pdf (16 pages, 237841 bytes).
 PDF statistics:
- 530 PDF objects out of 1000 (max. 8388607)
- 486 compressed objects within 5 object streams
- 37 named destinations out of 1000 (max. 500000)
+ 501 PDF objects out of 1000 (max. 8388607)
+ 458 compressed objects within 5 object streams
+ 35 named destinations out of 1000 (max. 500000)
  81 words of extra memory for PDF output out of 10000 (max. 10000000)
 

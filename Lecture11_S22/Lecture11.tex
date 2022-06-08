@@ -4,16 +4,17 @@
 \usepackage{algorithm2e}
 \graphicspath{{images/}}
 \title{CMPT 155: Computer Applications for Life Sciences}
-\subtitle{Lecture 10: Discrete Probability}
+\subtitle{Lecture 11: Continuous Probability - The Normal Distribtuion}
 \author{Ivan E. Perez}
 \institute{}
-\date{February 11, 2022}
+\date{April 19, 2022}
 \usepackage{booktabs} % Allows the use of \toprule, 
 \usepackage{appendix}
 \usepackage{enumerate,multicol}
 \usepackage{amsmath, amssymb, amsthm}
 \usepackage{tikz}
 \usepackage{amsxtra}
+\usepackage{bold-extra}
 \begin{document}
 	
 	\begin{frame}
@@ -29,133 +30,284 @@
 	\begin{frame}
 		\frametitle{Homework \& Administrative Schedule}
 		\begin{itemize}
-			\item Homework 2 Due: Tuesday, February $22^{\text{nd}}$ at 6pm
-			\item Homework 3 Due: Tuesday, March $1^{\text{st}}$ at 6pm
-			\item First Midterm Review:  Wednesday, March $2^{\text{nd}}$
-			\item First Midterm Exam: Friday, March, $4^{\text{th}}$
-			
-		\end{itemize}
-	\end{frame}
-	\begin{frame}
-		\begin{itemize}
-			\item Event - 
-			\item Outcome 
-			\item Probability
-			\item Sample Space 
-		\end{itemize}	
-	\end{frame}		
-	\begin{frame}
-		\frametitle{Fundamentals of Probability}
-		Discrete probability is about measuring the subset of outcomes that satisfy the restriction amongst a broader set of outcomes.
-		 
-	\end{frame}
-	\begin{frame}
-		\frametitle{Some more concepts}
-	\end{frame}
-	\begin{frame}
-		\frametitle{Probability}
-	\end{frame}
-	\begin{frame}
-		\frametitle{Examples}
-	\end{frame}
-	\begin{frame}
-		\frametitle{Some Facts}
-	\end{frame}
-	\begin{frame}
-		\frametitle{Exercise 1: Probability of Rolling Fair Dice}
-		On a new spreadsheet layout all the possible outcomes of two rolles of a fair die.\\
-		Compute the following probabilities:
-		\begin{itemize}
-			\item outcome of the dice roll will add up to 7.
-			\item outcome of the dice roll will add up to 8 or more.
-		\end{itemize}
-	\end{frame}
-	\begin{frame}
-		\frametitle{Exercise 1: Solution}
-		\begin{enumerate} 
-			\item Begin by filling Column A with the range of values that two dice can take
-			\item In column B list the ways each value can be observed by the dice, (e.g., 2 = snake eyes, or (1,1)) 
-			\item In Column C count the different ways each value can be observed by the dice.
-			\item In Column D compute the probability of each outcome by dividing count of the ways each outcome can be observed by the total count of all the different outcomes.
-		\end{enumerate}			
-		To compute probability ranges:
-		\begin{itemize}
-			\item  outcome of the dice roll will add up to 7.
-			\begin{itemize}
-				\item See Cell XXX
+			\item Homeworks:
+			\begin{itemize}	
+				\item \#6 Due: Friday April 22\textsuperscript{th} at 6pm
+				\item \#7 Due: Friday, April 29 \textsuperscript{rd} at 6pm
+				\item \#8 Due: Friday, May 6\textsuperscript{th} at 6pm
 			\end{itemize}
-			\item outcome of the dice roll will add up to 8 or more.
+			\item Final Exam Review: Tuesday, May 3\textsuperscript{rd} at 6pm
+			\item Mock Final Exam: Wednesday, May 4\textsuperscript{th}
+			\item \textbf{Final Exams}:
 			\begin{itemize}
-				\item Add up the computed probabilities in cells XX:XX
+				\item Section 01 (8am) Final Exam: May 9\textsuperscript{th} 11am - 1pm
+				\item Section 02 (9am) Final Exam: May 10\textsuperscript{th} 11 am - 1pm
 			\end{itemize}
 		\end{itemize}
 	\end{frame}
+\section{Introduction to Continuous Random Variables and the Normal Distribution}
 	\begin{frame}
-		\frametitle{Exercise 2a: Binomial Modelling of Emergency Room Arrivals}
+		\frametitle{Differences Between Discrete and Continuous Random Variables}
+		\begin{itemize}
+			\item Discrete probability is computed by \textit{counting} the subset of outcomes that satisfy restrictions against the broader set of outcomes.
+			\item Coninuous probability is about \textit{measuring} the range of outcomes that satisfy restrictions against the broader range of outcomes.
+		\end{itemize}
+	Example: 
+	\begin{itemize}
+		\item In the Binomial Model for Probability we were interested in the \textbf{direcete} number of $k$-success in $n$-trials.
+		\item In the Poisson Model for Probability we were interested in the \textbf{discrete} number of $x$-arrivals in a period of length $t$.
+		\item In the Guassian(Normal) Model for Probability we are interested in \textbf{ranges} of values.  
+	\end{itemize}	
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Why Should I care about the Normal Distribution?}
+		While few random variables are normally distributed on their own. The Central Limit Theorem states that the sum of non-normally distributed random variables tends to turn into a normal distribution as more random variables are added to the sum. \\
+		
+		Example: Adding Die to a dice roll
+		\begin{center}
+		\includegraphics[width=0.5\textwidth]{DicePlots_770.png}
+		\end{center}
+		
+		
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{Examples/Descriptions of the Normal Distribution}
+		Common Examples of Normal Distributions include:
+		\begin{itemize}
+			\item Distribution of Heights at different ages
+			\item Distribution of food weights at a deli.  
+			\item Distribution of Test scores. 
+		\end{itemize}
+	\bigskip
+	The Normal Distribution has the following characterstics:
+	\begin{itemize}
+		\item Symmetric about the Mean.
+		\item The Mode, Mean, and Median are all equivalent values.
+		\item 50 \% of values lie below the Mean, and 50 \% of values lie above the mean.
+		\item long tails that stretch infinitely. 
+	\end{itemize}
+	\end{frame}
+\section{Defining the Normal Distribution}
+	\subsection{Parameters of a Normal Distribution}
+	\begin{frame}
+		\frametitle{Features/Parameters of the Normal Distribution}
+		
+	Normally distributed random variables can be described using the parameters for location, $\mu$, and dispersion $\sigma^{2}$.
+	\begin{itemize}
+		\item Mean - $\mu$
+		\begin{itemize}
+			\item Measure of central tendency/location
+			\item Can be estimated using AVERAGE(), 
+		\end{itemize}
+		\item Variance - $\sigma^2$
+		\begin{itemize}
+			\item Measure of dispersion/scale
+			\item Can be estimated using VAR() or VAR.S()
+			\item its cousin Standard Deviation, $\sigma$
+			\begin{itemize}
+				\item Can be estimated using STDEV()
+				\item is just $\sqrt{\sigma^2}$
+			\end{itemize}
+		\end{itemize}
+	\end{itemize}
+	\end{frame}
+\subsection{Equations of the Normal Distribution}
+	\begin{frame}
+		\frametitle{Equations of the Normal Distribution}
+		Probability density functions(pdf's) can be used to describe distributions.
+		For a given $\mu, \sigma$, the normal distribution's probability density function is \begin{equation} 
+			f(x,\mu,\sigma)= \frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^2}. 
+			\end{equation}
+		Where $x$ is the input variable whose probability density is being computed using $f(x,\mu,\sigma)$. \\
+		The probability of a range of values is the area under the curve(AUC) between two computed probability densities.\\ The probability of a random variable, $\textbf{X}$, being within the range of $x_{1}$, and $x_{2}$, (i.e., $[x_1,x_2]$), for a given $\mu, \sigma$ is:
+		\begin{equation}
+		 P(x_{1} \leq \textbf{X} \leq x_{2}) 
+		= \int_{x_{1}}^{x_{2}} f(\textbf{X}, \mu, \sigma)dx 
+		\end{equation}
+	\end{frame}
+	\begin{frame}
+	\frametitle{Equations of the Normal Distribution}
+	Unfortunately, NORMDIST() only computes probabilities from $-\infty$ to $x$ in the form:
+	\begin{equation}
+		P(\textbf{X}\leq x) =  \int_{-\infty}^{x} f(x, \mu, \sigma)dx.
+	\end{equation}
+	We can express (Eq. 2) as a difference of probabilities,
+	\begin{equation}
+		P(x_1 \leq \textbf{X} \leq x_2 ) = P(\textbf{X}\leq x_2) - P(\textbf{X} \leq x_1)
+	\end{equation}
+	To express probabilities where the random variable, $\textbf{X}$, is at least $x_1$; we take the complement of $P(\textbf{X}\leq x_1)$:
+	\begin{equation}
+		P(\textbf{X}\geq x_1) = (P(\textbf{X}\leq x_1))^c = 1-P(\textbf{X}\leq x_1)
+	\end{equation}
+\end{frame}
+\section{The NORMDIST function}
+	\begin{frame}
+		\frametitle{The NORMDIST() function}
+		NORMDIST() computes the output of the pdf, $f(x,\mu,\sigma)$,  if \texttt{cumulative} is set to \texttt{FALSE}, or the probability $P(\textbf{X}\leq x)$ if  \texttt{cumulative} is set to \texttt{TRUE}. \\
+		The arguments are:
+		\begin{itemize}
+			\item \texttt{x} : numeric
+				\begin{itemize}
+					\item The input, $x$, for computing either $f(x,\mu, \sigma)$ or $P(\textbf{X}\leq x)$.
+				\end{itemize}
+			\item \texttt{mean} : numeric
+				\begin{itemize}
+					\item $\mu$ the population mean of the normal distribution. 
+				\end{itemize}
+			\item \texttt{standard\_dev} : numeric
+				\begin{itemize}
+					\item $\sigma$ the population standard deviation.
+					\item Must be 0 or more. 
+				\end{itemize}
+			\item \texttt{cumulative} : \texttt{TRUE} or \texttt{FALSE}
+				\begin{itemize}
+					\item \texttt{TRUE} : Computes $P(\textbf{X}\leq x)$.
+					\item \texttt{FALSE}: Computes $f(x,\mu, \sigma)$.
+				\end{itemize}
+		\end{itemize}
+		
+	\end{frame}
+
+\subsection{Example 1a: Plotting the Normal Distribution}
+	\begin{frame}
+		\frametitle{Example 1a: Plotting the Normal Distribution}
+		Use NORMDIST() to plot heights of men aged 60-69 years, given that their height is on average 5'9" with a standard deviation of 3 inches. Heights are assumed to be normally distributed about the mean. 
 		\begin{enumerate}
-			\item In a new spreadsheet lay 
+			\item Label columns A, B, and C as `Height', `Density', and `Cumulative' respectively.  
+			\item In cells A2:A20 List the heights increasing in 1in increments from the mean minus 3 standard deviations, (i.e., 60 in) to the mean plus 3 standard deviations (i.e., 78 in).
+			\item In cell B2 compute the probability \textit{density} that of male at this height.
+			\begin{itemize}
+				\item In cell B2 type \texttt{=NORMDIST(A2, 69, 3, FALSE)}
+			\end{itemize}
+			\item Use Autofill to compute \textit{densities} in cells B3:B20.
 		\end{enumerate}
 	\end{frame}
 	\begin{frame}
-		\frametitle{However...}
+		\frametitle{Example 1a: Solution}
+		\begin{enumerate}
+			\item In cell C2 compute the probability that a male will be this height or shorter. 
+			\begin{itemize}
+				\item In cell C2 type \texttt{=NORMDIST(A2, 69, 3, TRUE)}
+			\end{itemize}
+			\item Use Autofill to compute the probabilities in cells C3:C20.
+			\item Plot the probability density function and cumulative probabilities using separate 2D-Column charts. 
+			\begin{itemize}
+				\item Make sure that the column labels reference A2:A20.
+				\item Remember to only plot these values as a single series.
+			\end{itemize}
+		\end{enumerate}
 	\end{frame}
 	\begin{frame}
-		\frametitle{Sequential Events}
+		\frametitle{Example 1a: Solution}
+		\begin{center}
+			\includegraphics[width=0.75\textwidth]{Example1a.png}
+		\end{center}
+	
 	\end{frame}
+\subsection{Example 1b: Heights}
 	\begin{frame}
-		\frametitle{Binmial Probability}
-	\end{frame}
-	\begin{frame}
-		\frametitle{The BINOMDIST() function}
-	\end{frame}
-	\begin{frame}
-		\frametitle{Cumulative Distribution}
-	\end{frame}
-	\begin{frame}
-		\frametitle{Exercise 3: Smokers}
-		A local health department counsels patients coming to a clinic on cigarette smoking only if they are smokers. History has shown that about 27\% (i.e., 0.27) of patients are smokes when they first come to the clinic. Assume that the clinic will see 15 patients today.\\
+		\frametitle{Example 1b: Heights}
+		According to US Census Data in 2007/2008 Men aged 60-69 years, are on average 5'9" with a standard deviation of 3 inches. Heights are assumed to be normally distributed about the mean. \\
 		\bigskip
+
+		What is the proportion of men who are:
 		\begin{enumerate}
-			\item Graph both Binomial probability distribution and the cumulative distribution.
-			\item Compute the following probabilities:
-				\begin{itemize}
-					\item \textit{Exactly} 10 people are smokers.
-					\item 10 people or more are smokers.
-					\item 5 or fewer people are smokers.
-					\item between 7 and 10 people (inclusive) are smokers.
-				\end{itemize}
-		\end{enumerate} 
-	\end{frame}
-	\begin{frame}
-		\frametitle{The Poisson Distribution}
-	\end{frame}
-	\begin{frame}
-		\frametitle{The POISSON() Function}
-	\end{frame}
-	\begin{frame}
-		\frametitle{Example: Counting Train Arrivals}
-	\end{frame}
-	\begin{frame}
-		\frametitle{Exercise 4: Hospital Supply Quality Control}
-		A hospital supply room manager found that on average about 2 gloves in a box are not usable.
-		 
-		\begin{enumerate}
-			\item Graph the probability and cumulative distributions for the Poisson distribution function with $\lambda = 2$ 
-			\item Set the probability/cumulative outputs as a number with 4 decimal places.
-			\item Experiment to see how many scores are needed to capture the sample space for the Poisson distribution function with $\lambda=2$. 
-			\item Compute the following probabilities:
-				\begin{itemize}
-					\item Only $1$ glove will be unusable.
-					\item Fewer than $5$ gloves will be unusable.
-					\item At least $2$ gloves will be unusable.
-				\end{itemize}
+			\item Less than and including to 65 inches tall?
+			\item Less than and including to 69 inches tall?
+			\item Greater than 71 inches tall?
+			\item Greater than 68 inches tall?
+			\item Between 67 and 70 inches (inclusive)tall? 
 		\end{enumerate}
 	\end{frame}
+	
+%	\begin{frame}
+%		\frametitle{Notes on NORMDIST()}
+%		\begin{itemize}
+%			\item Because the Normal Distribution is a continuous distribution, we cannot compute probabilities by counting the individual cases that are in the range asked by the question.
+%			\item We must use Cumulative Probabilities (i.e., set the last argument to TRUE).
+%				\begin{itemize}
+%					\item when set to true the probabilitiy from $-\infty$ up to and including $x$ is computed. 
+%				\end{itemize}
+%			\item Setting the last argument to \texttt{FALSE} will compute the \textit{output} of the probability density function. $\leftarrow$ This is \textbf{NOT} a Probability.
+%		\end{itemize}	
+%	\end{frame}
+  	\begin{frame}
+  		\frametitle{Example 1b: Solution}
+  		For Probabilities that include:
+  		\begin{itemize}
+  			\item \textit{fewer} then compute $P(\textbf{X} \leq x)$.
+  				\begin{itemize}
+  					\item Example 1b Q1:\\ $P(\textbf{X} \leq 65) $ type: \texttt{=NORMDIST(65, 69, 3, TRUE)}.
+  				\end{itemize} 
+  			\item \textit{greater} then compute $P(\textbf{X} \geq x)$.  
+  			\begin{itemize}
+  				\item Use (Eq. 5) to express $P(\textbf{X} \geq x)$ as a complement of $P(\textbf{X}\leq x)$.
+  				\item Example 1b Q3: \\$P( \textbf{X} \geq 71) = (P(\textbf{X} \leq x))^c = 1 - P(\textbf{X} \leq x) $ type: \texttt{=1-NORMDIST(71, 69, 3, TRUE)}.
+  			\end{itemize}
+  		
+  			%	\item Use NORMDIST() to compute the probability from $-\infty$ up to the \textit{height} of interest.
+  			%	\item Subtract the probability computed from NORMDIST() from 1. 
+  			%\end{enumerate}
+  			\item \textit{lower}, $x_1$ and  \textit{upper}, $x_2$ bounds then compute $P(x_1 \leq \textbf{X} \leq x_2)$.
+  			\begin{itemize}
+  				\item Use (Eq. 4) to express the probability as a difference. 
+  				\item Example 1b Q5: \\
+  				$P(x_1 \leq \textbf{X} \leq x_2) = P(\textbf{X} \leq x_2) - P(\textbf{X} \leq x_1)$ type:\\
+  				\footnotesize{ 
+  				\texttt{=NORMDIST(70, 69, 3, TRUE) - NORMDIST(67, 69, 3, TRUE)}
+  			}
+  			\end{itemize}
+	\end{itemize}	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Example 1b: Solution}
+	{\footnotesize
+		\begin{tabular}{l | l | l| l}
+			Range & Expression & Computation & Result \\
+			\hline 
+			$\left(-\infty,\textbf{65}\right]$  & $P(X \leq \textbf{65})$ & \texttt{=NORMDIST(\textbf{65}, 69, 3, TRUE)} & 0.0912 \\
+			$\left(-\infty,\textbf{69}\right]$  & $P(X \leq \textbf{65})$ & \texttt{=NORMDIST(\textbf{69}, 69, 3, TRUE)} & 0.5000 \\
+			$\left[\textbf{71}, \infty \right) $ & $P(X\geq\textbf{71})$ & \texttt{=1-NORMDIST(\textbf{71}, 69, 3, TRUE)} &  0.2523\\
+			$\left[\textbf{68}, \infty \right) $ & $P(X\geq\textbf{68})$ & \texttt{=1-NORMDIST(\textbf{68}, 69, 3, TRUE)} & 0.6306\\
+			$\left[\textbf{67}, \textbf{70}\right]$ &$P(\textbf{67} \leq X \leq \textbf{70})$ & \texttt{=NORMDIST(\textbf{70}, 69,3,TRUE) - }& 0.3781\\
+			&&\texttt{  NORMDIST(\textbf{67}, 69,3, TRUE)}&\\
+		\end{tabular}
+	}
+\end{frame}
+\section{Facts and Special Cases of the Normal Distribution}
 	\begin{frame}
-		\frametitle{Exercise 4: Solution}
+		\frametitle{Facts to Remember about the Normal Distribution}
+		\begin{enumerate}
+			\item $\sim68\%$ of the area under the curve is enclosed within $\pm1$ standard deviation, $1\sigma$, from the mean, $\mu$.
+			\item $\sim95\%$ of the area under the curve is enclosed within $\pm2$ standard deviations, $2\sigma$, from the mean, $\mu$.
+			\item $\sim99\%$ of the area under the curve is enclosed within $\pm3$ standard deviations  $3\sigma$,from the mean, $\mu$.
+		\end{enumerate}
+	\begin{center}
+		\includegraphics[width=0.75\textwidth]{areaundercurve.png}
+	\end{center}
+\end{frame}
+	
+	\begin{frame}
+		\frametitle{The Standard Normal Distribution}
+		The Standard Normal Distribution is a special case of the Normal Distribution. where
+		\begin{itemize}
+			\item The mean, $\mu = 0$
+			\item The standard deviation, $\sigma =1$.
+		\end{itemize}
+		\begin{center}
+		\begin{figure}
+		\includegraphics[width=0.65\textwidth]{SNorm.png}
+		\caption{The Standard Normal Distribution}
+		\end{figure}
+	\end{center}
 	\end{frame}
+\section{Further Reading}
 	\begin{frame}
 		\frametitle{Further Reading}
-		The topics covered in the lecture can be found in \textit{Compter Applications for Life Sciences} p. 63 - 74.
+		The topics covered in the lecture can be found in \textit{Compter Applications for Life Sciences} p. 76-84.
 	\end{frame}
+	
 \end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.11)  9 FEB 2022 14:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.11)  7 JUN 2022 12:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1213,6 +1213,25 @@ Overfull \hbox (19.23224pt too wide) has occurred while \output is active
 [4
 
  <./images//Order.png>]
+LaTeX Font Info:    Trying to load font information for U+msa on input line 59.
+
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 59.
+
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on inp
+ut line 59.
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
+File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/ma
+thkerncmss.
+)
 <images//OrderConditional.png, id=169, 664.4825pt x 320.19624pt>
 File: images//OrderConditional.png Graphic file (type png)
 <use images//OrderConditional.png>
@@ -1226,25 +1245,6 @@ Overfull \hbox (19.23224pt too wide) has occurred while \output is active
 [5
 
  <./images//OrderConditional.png>]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 74.
-
-
-(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 74.
-
-
-(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on inp
-ut line 74.
-
-(/usr/local/texlive/2021/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
-File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/ma
-thkerncmss.
-)
 Overfull \hbox (19.23224pt too wide) has occurred while \output is active
  [][][][]  
  []
@@ -1299,7 +1299,7 @@ Overfull \hbox (19.23224pt too wide) has occurred while \output is active
 [11
 
 ]
-<images//Exercise2Soln.png, id=368, 964.60374pt x 324.21124pt>
+<images//Exercise2Soln.png, id=367, 964.60374pt x 324.21124pt>
 File: images//Exercise2Soln.png Graphic file (type png)
 <use images//Exercise2Soln.png>
 Package pdftex.def Info: images//Exercise2Soln.png  used on input line 150.
@@ -1326,7 +1326,7 @@ Overfull \hbox (19.23224pt too wide) has occurred while \output is active
 [14
 
 ]
-<images//Exercise3Soln.png, id=448, 483.8075pt x 470.75874pt>
+<images//Exercise3Soln.png, id=447, 483.8075pt x 470.75874pt>
 File: images//Exercise3Soln.png Graphic file (type png)
 <use images//Exercise3Soln.png>
 Package pdftex.def Info: images//Exercise3Soln.png  used on input line 179.
@@ -1382,13 +1382,19 @@ Overfull \hbox (19.23224pt too wide) has occurred while \output is active
 [19
 
 ]
+<images//Exercise4Soln.png, id=583, 832.10875pt x 601.24625pt>
+File: images//Exercise4Soln.png Graphic file (type png)
+<use images//Exercise4Soln.png>
+Package pdftex.def Info: images//Exercise4Soln.png  used on input line 246.
+(pdftex.def)             Requested size: 306.62396pt x 221.54936pt.
+
 Overfull \hbox (19.23224pt too wide) has occurred while \output is active
  [][][][]  
  []
 
 [20
 
-]
+ <./images//Exercise4Soln.png>]
 Overfull \hbox (19.23224pt too wide) has occurred while \output is active
  [][][][]  
  []
@@ -1417,9 +1423,11 @@ Overfull \hbox (19.23224pt too wide) has occurred while \output is active
 [24
 
 ]
-Overfull \vbox (1.52821pt too high) detected at line 323
- []
-
+<images//Exercise5Soln.png, id=715, 635.37375pt x 306.14375pt>
+File: images//Exercise5Soln.png Graphic file (type png)
+<use images//Exercise5Soln.png>
+Package pdftex.def Info: images//Exercise5Soln.png  used on input line 300.
+(pdftex.def)             Requested size: 272.55751pt x 131.33093pt.
 
 Overfull \hbox (19.23224pt too wide) has occurred while \output is active
  [][][][]  
@@ -1427,12 +1435,47 @@ Overfull \hbox (19.23224pt too wide) has occurred while \output is active
 
 [25
 
-]
+ <./images//Exercise5Soln.png>]
 Overfull \hbox (19.23224pt too wide) has occurred while \output is active
  [][][][]  
  []
 
 [26
+
+]
+Overfull \vbox (1.52821pt too high) detected at line 336
+ []
+
+
+Overfull \hbox (19.23224pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[27
+
+]
+<images//Exercise6Soln.png, id=797, 491.8375pt x 559.08875pt>
+File: images//Exercise6Soln.png Graphic file (type png)
+<use images//Exercise6Soln.png>
+Package pdftex.def Info: images//Exercise6Soln.png  used on input line 342.
+(pdftex.def)             Requested size: 204.41943pt x 232.36726pt.
+
+Overfull \vbox (7.08293pt too high) detected at line 342
+ []
+
+
+Overfull \hbox (19.23224pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[28
+
+ <./images//Exercise6Soln.png>]
+Overfull \hbox (19.23224pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[29
 
 ]
 \tf@nav=\write6
@@ -1449,10 +1492,10 @@ Package rerunfilecheck Info: File `Lecture06.out' has not changed.
 (rerunfilecheck)             Checksum: D8314A1B68EDAF6897E9FF21780CDAFC;907.
  ) 
 Here is how much of TeX's memory you used:
- 25161 strings out of 478994
- 480857 string characters out of 5858183
- 776436 words of memory out of 5000000
- 42027 multiletter control sequences out of 15000+600000
+ 25191 strings out of 478994
+ 481445 string characters out of 5858183
+ 776838 words of memory out of 5000000
+ 42048 multiletter control sequences out of 15000+600000
  415905 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  131i,15n,132p,432b,669s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1472,10 +1515,10 @@ ocal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/lo
 cal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr
 /local/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfss1095.pfb></usr/l
 ocal/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on Lecture06.pdf (26 pages, 1154950 bytes).
+Output written on Lecture06.pdf (29 pages, 1652803 bytes).
 PDF statistics:
- 831 PDF objects out of 1000 (max. 8388607)
- 759 compressed objects within 8 object streams
- 59 named destinations out of 1000 (max. 500000)
- 133 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 915 PDF objects out of 1000 (max. 8388607)
+ 833 compressed objects within 9 object streams
+ 65 named destinations out of 1000 (max. 500000)
+ 148 words of extra memory for PDF output out of 10000 (max. 10000000)
 

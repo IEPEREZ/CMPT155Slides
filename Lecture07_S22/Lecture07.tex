@@ -265,8 +265,7 @@ Try running these functions and seeing what median you return!
 \begin{frame}
 	\frametitle{VLOOKUP}
 	\begin{itemize}
-		\item returns something.
-		\item inputs : 
+		\item inputs: 
 			\begin{itemize}
 				\item \texttt{lookup\_value} : cell reference\\
 				Your query (i.e., What it is you are looking for.) 
@@ -276,6 +275,10 @@ Try running these functions and seeing what median you return!
 				The column index starting from 1 that you want to display/retrieve.
 				\item \texttt{FALSE} : FALSE\\ if exact match is needed, TRUE if close enough is okay.
 			\end{itemize}
+		\item returns:
+		\begin{itemize}
+			\item \textbf{Cell content} that correspond to the \texttt{lookup\_value} specified. 
+		\end{itemize}
 		\end{itemize}
 \end{frame}
 \begin{frame}
@@ -285,10 +288,10 @@ Try running these functions and seeing what median you return!
 	\item Fill out cells \texttt{C4:C8} using the appropriate VLOOKUP function call, for each search field given a search term in cell \texttt{B2}. 
 	\item For Example: If we enter \texttt{1} for the product ID in cell \texttt{B2},\\  then out VLOOKUP arguments for \textbf{Product} are:
 		\begin{tabular}{l l }
-		 	\texttt{look\_up\_value : B3}& $\leftarrow$ This is our search term.\\
-		 	\texttt{range : A12:F78}& $\leftarrow$  The entire dataset.\\
-		 	\texttt{column\_index\_number : 2} &$\leftarrow$ We want the second column.\\
-		 	\texttt{FALSE : FALSE}& $\leftarrow$ We want \textbf{exact matches}.\\
+		 	\texttt{look\_up\_value : B3}& $\leftarrow$ Our search term\\
+		 	\texttt{range : A12:F78}& $\leftarrow$  The entire dataset\\
+		 	\texttt{column\_index\_number : 2} &$\leftarrow$ We want the second column\\
+		 	\texttt{FALSE : FALSE}& $\leftarrow$ To get \textbf{exact matches}\\
 		 \end{tabular}
 
 	 	\includegraphics[width =0.9\textwidth ]{VLOOKUPEx.png}

@@ -4,16 +4,17 @@
 \usepackage{algorithm2e}
 \graphicspath{{images/}}
 \title{CMPT 155: Computer Applications for Life Sciences}
-\subtitle{Lecture 10: Discrete Probability}
+\subtitle{Lecture 12: Importing, Sorting and Parsing Data; Matrix Operations}
 \author{Ivan E. Perez}
 \institute{}
-\date{February 11, 2022}
+\date{April 26, 2022}
 \usepackage{booktabs} % Allows the use of \toprule, 
 \usepackage{appendix}
 \usepackage{enumerate,multicol}
 \usepackage{amsmath, amssymb, amsthm}
 \usepackage{tikz}
 \usepackage{amsxtra}
+\usepackage{cancel}
 \begin{document}
 	
 	\begin{frame}
@@ -27,135 +28,325 @@
 	\section{Homework \& Administrative}
 	
 	\begin{frame}
-		\frametitle{Homework \& Administrative Schedule}
+			\frametitle{Homework \& Administrative Schedule}
 		\begin{itemize}
-			\item Homework 2 Due: Tuesday, February $22^{\text{nd}}$ at 6pm
-			\item Homework 3 Due: Tuesday, March $1^{\text{st}}$ at 6pm
-			\item First Midterm Review:  Wednesday, March $2^{\text{nd}}$
-			\item First Midterm Exam: Friday, March, $4^{\text{th}}$
-			
-		\end{itemize}
-	\end{frame}
-	\begin{frame}
-		\begin{itemize}
-			\item Event - 
-			\item Outcome 
-			\item Probability
-			\item Sample Space 
-		\end{itemize}	
-	\end{frame}		
-	\begin{frame}
-		\frametitle{Fundamentals of Probability}
-		Discrete probability is about measuring the subset of outcomes that satisfy the restriction amongst a broader set of outcomes.
-		 
-	\end{frame}
-	\begin{frame}
-		\frametitle{Some more concepts}
-	\end{frame}
-	\begin{frame}
-		\frametitle{Probability}
-	\end{frame}
-	\begin{frame}
-		\frametitle{Examples}
-	\end{frame}
-	\begin{frame}
-		\frametitle{Some Facts}
-	\end{frame}
-	\begin{frame}
-		\frametitle{Exercise 1: Probability of Rolling Fair Dice}
-		On a new spreadsheet layout all the possible outcomes of two rolles of a fair die.\\
-		Compute the following probabilities:
-		\begin{itemize}
-			\item outcome of the dice roll will add up to 7.
-			\item outcome of the dice roll will add up to 8 or more.
-		\end{itemize}
-	\end{frame}
-	\begin{frame}
-		\frametitle{Exercise 1: Solution}
-		\begin{enumerate} 
-			\item Begin by filling Column A with the range of values that two dice can take
-			\item In column B list the ways each value can be observed by the dice, (e.g., 2 = snake eyes, or (1,1)) 
-			\item In Column C count the different ways each value can be observed by the dice.
-			\item In Column D compute the probability of each outcome by dividing count of the ways each outcome can be observed by the total count of all the different outcomes.
-		\end{enumerate}			
-		To compute probability ranges:
-		\begin{itemize}
-			\item  outcome of the dice roll will add up to 7.
-			\begin{itemize}
-				\item See Cell XXX
+			\item Homeworks:
+			\begin{itemize}	
+				\item \#7 Due: Friday, April 29\textsuperscript{rd} at 6pm
+				\item \#8 Due: Friday, May 6\textsuperscript{th} at 6pm
 			\end{itemize}
-			\item outcome of the dice roll will add up to 8 or more.
+			\item Final Exam Review: Tuesday, May 3\textsuperscript{rd} at 6pm
+			\item Mock Final Exam: Wednesday, May 4\textsuperscript{th}
+			\item \textbf{Final Exams}:
 			\begin{itemize}
-				\item Add up the computed probabilities in cells XX:XX
+				\item Section 01 (8am) Final Exam: May 9\textsuperscript{th} 11am - 1pm
+				\item Section 02 (9am) Final Exam: May 10\textsuperscript{th} 11 am - 1pm
 			\end{itemize}
 		\end{itemize}
 	\end{frame}
+\section{Importing, Sorting and Parsing Data}
+\subsection{Importing Data}
 	\begin{frame}
-		\frametitle{Exercise 2a: Binomial Modelling of Emergency Room Arrivals}
+		\frametitle{Importing Data}
+		Data can be imported from:
+		\begin{itemize}
+			\item text files (e.g., .txt, .csv)  
+			\item database connections (e.g., MySQL, MSAccess) 
+		\end{itemize}	 
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{Importing from Text Files}
+				Importing Data From Text
+		\begin{itemize}
+			\item right (Ctrl) -click a text file and try opening it with Excel
+			\item In the Data Tab go to (Get Data) followed by From Text
+			\item The Text to Columns wizard should start up. 
+		\end{itemize}
+	\end{frame}
+
+\subsection{Parsing Data}
+	\begin{frame}
+		\frametitle{Parsing Data}
+		Data can be parsed using the Text to Columns wizard. 
+		\begin{figure}[ht]
+			\begin{minipage}{0.3\linewidth}
+				%\centering  % redundant
+				\includegraphics[width=\textwidth]{T2CStep1.png}
+				\caption{Step 1: Specify the way you wanted to delimit (i.e., separate/find breaks) in your data.}
+				\label{fig:figure1}
+			\end{minipage}%
+			\hfill% not: "\hspace{0.5cm}"
+			\begin{minipage}{0.3\linewidth}
+				%\centering  % redundant
+				\includegraphics[width=\textwidth]{T2CStep2.png}
+				\caption{Step 2: Apply the delimiter that makes sense for your raw data. In this case `Commas', `,' is our delimiter.}
+				\label{fig:figure2}
+			\end{minipage}%
+			\hfill% not: "\hspace{0.5cm}"
+			\begin{minipage}{0.3\linewidth}
+				%\centering  % redundant
+				\includegraphics[width=\textwidth]{T2CStep3.png}
+				\caption{Step 3: Verify that data has been parsed correctly, and add final touches and/or Advanced options.}
+				\label{fig:figure3}
+			\end{minipage}
+		\end{figure}
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{Concatenating Data}
+		Cells can be concatenaed by using the `\&' operator or using CONCAT().
+			\begin{figure}
+				\begin{center}
+					\includegraphics[width=0.9\textwidth]{CONCAT.png}
+				\end{center}
+			\end{figure}
+	\end{frame}
+\subsection{Sorting Data}
+	\begin{frame}
+		\frametitle{Sorting Data}
+		Data can be sorted in the Home $\rightarrow$ Sort \& Filter Menu:
+		\begin{itemize}
+			\item manually by using `Custom Sort' wizard.
+			\item by A-Z by using `Sort A to Z' or `Sort Z to A'.
+			\item automatically selecting Filter icon and using the Filter submenus. 
+		\end{itemize}
+	\end{frame}
+	\begin{frame}
+		\frametitle{Filtering Data}
+		Data can be filtered and sorted using the Autofilter button in the Data Tab.
+		
+	\end{frame}
+\subsection{Example 1: NY Data}
+	\begin{frame}
+		\frametitle{Example 1: NY data}
+		Restated from p.45 
 		\begin{enumerate}
-			\item In a new spreadsheet lay 
+			\item Open: \textcolor{blue}{ \href{https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9}{NYC Open Data Search 311 Service Requests 2010 to Present}}.
+			\item Click Export $\rightarrow$ CSV. A very long download should start.
+			\begin{itemize}
+			\item If you want to get a feel for the data try using a snippet of this dataset called NYCOpenData311Sample.csv
+			\end{itemize}
+			\item Try importing this data using the Data import wizard.
+			\item Try answering the following questions:
+			\begin{enumerate}[a.]%[label=\Alph*]
+				\item How Many 311 requests were filed under the Department of Transportation (DOT), and how many were filed under the NYPD?
+				\item How many complaints did each Borough(Communitys) have?
+				\item What Type of complaint was the most common?
+				\item What were the Unique Keys, and Descriptors of the complaints \textbf{not} associated with Noise?
+			\end{enumerate}
 		\end{enumerate}
 	\end{frame}
 	\begin{frame}
-		\frametitle{However...}
+		\frametitle{Example 1: Solution}
+		\begin{center}
+			\begin{tabular}{l |l}
+				Question No. & Answer \\
+				\hline
+				a & DOT = 2; NYPD = 12\\
+				b & Manhattan = 5; Bronx = 3; \\
+				& Brooklyn  =4; Queens =2  \\
+				c  & Noise Complaint \\
+			\end{tabular}
+		\end{center}
+	d. 
+	\begin{center}
+		\begin{tabular}{ l | l }
+			Unique Key & Descriptor \\
+			\hline
+			997177	&	Pothole\\
+			53995389 & With License Plate\\
+			53994527 & Blocked Hydrant\\
+			53999207 & Plate Condition - Noisy\\
+			54000934 & Blocked Hydrant
+		\end{tabular}
+	\end{center}
 	\end{frame}
+\subsection{Exercise 1: Jordan Sales}
 	\begin{frame}
-		\frametitle{Sequential Events}
-	\end{frame}
-	\begin{frame}
-		\frametitle{Binmial Probability}
-	\end{frame}
-	\begin{frame}
-		\frametitle{The BINOMDIST() function}
-	\end{frame}
-	\begin{frame}
-		\frametitle{Cumulative Distribution}
-	\end{frame}
-	\begin{frame}
-		\frametitle{Exercise 3: Smokers}
-		A local health department counsels patients coming to a clinic on cigarette smoking only if they are smokers. History has shown that about 27\% (i.e., 0.27) of patients are smokes when they first come to the clinic. Assume that the clinic will see 15 patients today.\\
-		\bigskip
+		\frametitle{Exercise 1: Jordan Sales }
 		\begin{enumerate}
-			\item Graph both Binomial probability distribution and the cumulative distribution.
-			\item Compute the following probabilities:
-				\begin{itemize}
-					\item \textit{Exactly} 10 people are smokers.
-					\item 10 people or more are smokers.
-					\item 5 or fewer people are smokers.
-					\item between 7 and 10 people (inclusive) are smokers.
-				\end{itemize}
-		\end{enumerate} 
-	\end{frame}
-	\begin{frame}
-		\frametitle{The Poisson Distribution}
-	\end{frame}
-	\begin{frame}
-		\frametitle{The POISSON() Function}
-	\end{frame}
-	\begin{frame}
-		\frametitle{Example: Counting Train Arrivals}
-	\end{frame}
-	\begin{frame}
-		\frametitle{Exercise 4: Hospital Supply Quality Control}
-		A hospital supply room manager found that on average about 2 gloves in a box are not usable.
-		 
-		\begin{enumerate}
-			\item Graph the probability and cumulative distributions for the Poisson distribution function with $\lambda = 2$ 
-			\item Set the probability/cumulative outputs as a number with 4 decimal places.
-			\item Experiment to see how many scores are needed to capture the sample space for the Poisson distribution function with $\lambda=2$. 
-			\item Compute the following probabilities:
-				\begin{itemize}
-					\item Only $1$ glove will be unusable.
-					\item Fewer than $5$ gloves will be unusable.
-					\item At least $2$ gloves will be unusable.
-				\end{itemize}
+			\item Import the file `JordanSales.csv'.
+			\item Use Autofiler to Create Filter Criteria.
+			\item Answer the following Questions about the data set.
+			\begin{itemize}
+				\item What is the average sneaker sales price for release years 2014 through 2019?
+				\item How many options does a customer have if they want a sneaker from 2019 with an average retail price between \$175-\$250?
+				\item Based on your taste, what release year would you buy from and how much would you be willing to pay for Jordans?
+			\end{itemize}
 		\end{enumerate}
 	\end{frame}
+\section{Matrices}
 	\begin{frame}
-		\frametitle{Exercise 4: Solution}
+		\frametitle{Matrices}
+		Matrices are arrays of numbers $m$-rows and $n$-columns. 
+		Similar to how we performed operations on cells with single values, certain operations and be applied to matrices. 
+		Matrices can be labled using capital letters.
+		$$ \textbf{\text{A}} = 
+			\begin{bmatrix}
+				1 & 3 \\
+				2 & 6 \\
+				7 & 9 
+			\end{bmatrix}
+			\quad 
+			\textbf{\text{B}} = 
+			\begin{bmatrix}
+				4 & 5 & 8 \\
+				10 & 11 & 12 
+			\end{bmatrix}
+			\quad
+			\textbf{\text{C}} = 
+			\begin{bmatrix}
+				5 & 6 \\
+				7 & 8 
+			\end{bmatrix}
+			\quad
+			\textbf{\text{I}} =
+			\begin{bmatrix}
+				1 & 0 \\
+				0 & 1 \\
+			\end{bmatrix}
+			\quad
+		$$
 	\end{frame}
+\subsection{Matrix Operations}
+	\begin{frame}
+		\frametitle{Matrix Operations}
+			Addition: $+$
+			\begin{itemize}
+				\item Matrices must be the same size
+				\item Size: $(m \times n) - (m\times n)$ 
+				\item Output Size: $ m \times n $
+				\item Example: $\textbf{\text{A}} + \textbf{\text{A}} = 2\textbf{\text{A}}$ 
+			\end{itemize}
+			Subtraction: $-$
+			\begin{itemize}
+				\item Matrices must be the same size
+				\item Size: $(m \times n) - (m\times n)$ 
+				\item Output Size: $ m \times n $
+				\item Example: $\textbf{\text{A}} - \textbf{\text{A}} = 0 $ 
+			\end{itemize}
+%		\begin{tabular}{| l | l | c | c | c | }
+%			Operation & Comment & Size & Size of Result & Example\\
+%			\hline
+%			Subtraction &Matrices must be the same size & $ & A-A = 0 \\
+%			\hline
+%			Subtraction &Matrices must be the same size & $(m \times n) + (m\times n)$ & $m\times n$  & \\  
+%			\hline
+%			Multiplication,& Number of rows in first matrix &  & $m \times r$ & $A\dot B = AB  $\\
+%			 `MMULT()' &&&&\\
+%			& & & & \\
+%			&in the second matrix &&&\\
+%			\hline 
+%			Inverse, & Square \textit{nonsingular} matrices only!,  & && \\
+%			 `MINVERSE()' &&&&\\
+%			 \hline
+%			Determinant, &&&&\\
+%			`MDTEREM()' &&&& \\ 
+%			\hline
+%			Transpose, &&&&\\
+%			`TRANSPOSE()' &&&&\\ 
+%			
+%		\end{tabular}
+%	
+	\end{frame}
+	\begin{frame}
+		\frametitle{Matrix Operations: Continued}
+		Multiplication: MMULT()
+		\begin{itemize}
+			\item  Number of rows in first matrix \textbf{MUST} equal number of columns in the second matrix.
+			\item Size: $(m\times n) \cdot (n \times r) $
+			\item Output Size: $ m \times r $
+			\item Example:  $\textbf{\text{A}} \cdot \textbf{\text{B}} = \textbf{\text{AB}}$ 
+		\end{itemize}
+		Determinant:  MDETERM() 
+		\begin{itemize}
+			\item Square matrices only
+			\item Size: $n \times n $
+			\item Output Size: Single Value
+			\item Example: $\text{det}(\textbf{\textbf{C}}) = -2 $
+		\end{itemize}
+	\end{frame}
+	\begin{frame}
+		\frametitle{Matrix Operations: Continued}
+		 Inverse: MINVERSE()
+		 \begin{itemize}
+		 	\item Square nonsingular matrices only.
+		 	\item Size: $n \times n $
+		 	\item Output Size:  $n \times n $
+		 	\item Example: $\textbf{\text{C}}^{-1}$
+		 \end{itemize}
+	 	Transpose: TRANSPOSE()
+	 	\begin{itemize}
+	 		\item All Matrices
+	 		\item Size: $m \times n$ 
+	 		\item Output Size: $n \times m$
+	 		\item Example: $\textbf{\text{A}}^{\text{T}}$
+	 	\end{itemize}
+ 	\end{frame}
+\subsection{Solving Linear Equations}
+	\begin{frame}
+		\frametitle{Solving Linear Equations with Matrices}
+		Linear equations with three unknowns can take the form:
+		\begin{align*}
+			10x + 12y + 15z = 40 \\
+			11x + 12y  + 14z = 80 \\
+			3x + 4y + 4z = 24 
+		\end{align*}
+		Expressing this equation using matrices we get, 
+		\begin{equation*}
+			\textbf{\text{AX}} = \textbf{\text{b}} 
+		\end{equation*}
+		Where 
+		\begin{equation*}
+			\textbf{\text{A}} = 
+			\begin{bmatrix}
+				10 & 12 & 15 \\
+				11 & 12 & 14 \\
+				3 & 4 & 4 
+			\end{bmatrix}
+			\quad
+			\textbf{\text{X}} = 
+			\begin{bmatrix} 
+				x \\
+				y \\
+				z
+			\end{bmatrix}
+			\quad
+			\textbf{\text{b}} = 
+			\begin{bmatrix}
+				40 \\
+				80 \\
+				24
+			\end{bmatrix}
+		\end{equation*}
+	\end{frame}
+\subsection{Example 2}
+	\begin{frame}
+		\frametitle{Example 2: Solution}
+		The solution to this equation is 
+		\begin{align*}
+			\textbf{\text{AXA}}^{-1} =  \textbf{\text{bA}}^{-1}\\
+			\textbf{\text{\cancel{A}X}}\cancel{\textbf{\text{A}}^{-1}} =  \textbf{\text{bA}}^{-1}\\
+			\textbf{\text{X}} = \textbf{\text{bA}}^{-1}
+		\end{align*}
+	We can express this solution in Excel by:
+	\begin{enumerate}
+		\item Writing out arrays for \textbf{A} and \textbf{b}.
+		\item Using MINVERSE() on the selection for \textbf{A} to derive \textbf{A}\textsuperscript{-1}.
+		\item Using MMULT() to multiply \textbf{b} by \textbf{A}\textsuperscript{-1} .
+	\end{enumerate}
+	\end{frame}
+	\begin{frame}
+		\frametitle{Example 2: Solution}
+		\begin{center}
+			\includegraphics[width=0.9\textwidth]{MatrixExample.png}
+		\end{center}
+	\end{frame}
+\section{Further Reading}
 	\begin{frame}
 		\frametitle{Further Reading}
-		The topics covered in the lecture can be found in \textit{Compter Applications for Life Sciences} p. 63 - 74.
+		The topics covered in the lecture can be found in \textit{Compter Applications for Life Sciences} p.39-46 and p. 85-90
 	\end{frame}
+
 \end{document}

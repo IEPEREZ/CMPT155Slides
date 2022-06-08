@@ -7,7 +7,7 @@
 \subtitle{Lecture 10: Discrete Probability}
 \author{Ivan E. Perez}
 \institute{}
-\date{February 11, 2022}
+\date{March 29, 2022}
 \usepackage{booktabs} % Allows the use of \toprule, 
 \usepackage{appendix}
 \usepackage{enumerate,multicol}
@@ -31,22 +31,29 @@
 	
 	\begin{frame}
 		\frametitle{Homework \& Administrative Schedule}
+		Older Action Items
 		\begin{itemize}
-			\item Homework 2 Due: Tuesday, February $22^{\text{nd}}$ at 6pm
-			\item Homework 3 Due: Tuesday, March $1^{\text{st}}$ at 6pm
-			\item First Midterm Review:  Wednesday, March $2^{\text{nd}}$
-			\item First Midterm Exam: Friday, March, $4^{\text{th}}$
-			
+			\item Homework 5 Due: Friday, March 25\textsuperscript{th} at 6 pm
+			\item Second Midterm:
+			\begin{itemize}
+				\item  Practice test:  Wednesday, March 23\textsuperscript{rd}
+				\item Second Midterm Review: Friday March 25\textsuperscript{th}
+				\item Second Midterm Exam: Tuesday, March 29\textsuperscript{th}
+			\end{itemize}
 		\end{itemize}
-	\end{frame}
-	\begin{frame}
+		Newer Action Items
 		\begin{itemize}
-			\item Event - 
-			\item Outcome 
-			\item Probability
-			\item Sample Space 
-		\end{itemize}	
-	\end{frame}		
+			\item Last Day to Drop Classes:  Wednesday April 20\textsuperscript{th}
+			\item Last Day of Classes: Friday May 6\textsuperscript{th}
+			\item Final Exams:
+				\begin{itemize}
+					\item Section 01 (8am) Final Exam: May 9\textsuperscript{th} 11am - 1pm
+					\item Section 02 (9am) Final Exam: May 10\textsuperscript{th} 11 am - 1pm
+				\end{itemize}
+		\end{itemize}
+	See \href{https://inside.manhattan.edu/academic-resources/registrar/final-exam-schedule.php}{Registrar's Final Exam schedule} for more information. 
+	\end{frame}
+\section{Fundamentals of Probability}
 	\begin{frame}
 		\frametitle{Fundamentals of Probability}
 		Discrete probability is about measuring the subset of outcomes that satisfy the restriction amongst a broader set of outcomes.\\
@@ -78,9 +85,10 @@
 			\begin{itemize}
 				\item An event is called independent IF the outcome of one event does not influence the outcome of the other
 		\end{itemize}
+		\bigskip
 		 \item Mutually Exclusive Events/Outcomes:
 		 	\begin{itemize}
-		 		\item Outcomes of Events that annoc result in observing multiple outcomes at the same time. 
+		 		\item Outcomes of Events that can not result in observing multiple outcomes at the same time. 
 		 	\end{itemize}
 		\end{itemize}
 	\end{frame}
@@ -131,6 +139,7 @@
 			\item The sum of the probabilities of all possible mutually exclusive events will always be \textbf{1}.
 		\end{enumerate}
 	\end{frame}
+\subsection{Exercise 1: Probability of Rolling Fair Dice}
 	\begin{frame}
 		\frametitle{Exercise 1: Probability of Rolling Fair Dice}
 		On a new spreadsheet layout all the possible outcomes of two rolls of a fair die.\\
@@ -166,6 +175,7 @@
 			\includegraphics[width=0.9\textwidth]{Exercise1Soln.png}
 		\end{center}
 	\end{frame}
+\subsection{Exercise 2: Emergencies}
 	\begin{frame}
 		\frametitle{Exercise 2a: Binomial Modelling of Emergency Room Arrivals}
 		\begin{enumerate}
@@ -240,22 +250,75 @@
 			\item Save this sheet for when we use BINOMDIST() later on.
 		\end{enumerate}
 	\end{frame}
+\section{The Binomial Distribution}
 	\begin{frame}
 		\frametitle{Binomial Probability}
 		We define a \textit{binomial distrubtion} to be an experiment in which:
 		\begin{itemize}
-			\item there are a fixed number of independent trials. 
-			\item each trial has only 2 possible outcomes
-			\item the probability of each outcome for a single trial remains fixed throughout the experiement.
+			\item there are a fixed number of $n$-independent trials. 
+			\item each trial has only 2 possible outcomes, Success or Failure
+				\begin{itemize}
+					\item We are interested in counting the number of $k$-successes.
+				\end{itemize}
+			\item the probability of a success, $p$, for a single trial remains fixed throughout the experiement.
 		\end{itemize}
+	The \textit{Expected Value} of Successes, $X$, is $E\left[X\right]= np$.
+	\bigskip
 	Have we been doing a Binomial experiment with Exercise 2b? 
+	
+	
 	\end{frame}
 	\begin{frame}
 		\frametitle{The BINOMDIST() function}
+		BINOMDIST() computes the \textit{probabilty} of observing $k$ successes, in an experiment with $n$ trials. The Inputs/Arguments are:
+		\begin{itemize}
+			\item \texttt{number\_s} : integer
+			\begin{itemize}
+				\item The number of \textit{successes} you wish to observe.
+				\item Must be between 0 and the \textbf{total} number of trials.
+			\end{itemize}
+			\item \texttt{trials} : integer
+			\begin{itemize}
+				\item The total number of \textit{trials}, $n$, that are in your experiment.
+				\item  Must be greater than or equal to number of \textit{successes}, $k$.
+			\end{itemize}
+			\item \texttt{probability\_s} : numeric
+			\begin{itemize}
+				\item  Probabiltiy of a success. Given, or empirically estimated.
+				\item Must be between 0 and 1.
+			\end{itemize}
+			\item \texttt{cumulative} : \texttt{TRUE} or \texttt{FALSE}
+			\begin{itemize}
+				\item if \texttt{FALSE} then computes the \textit{exact} probability.
+				\item if \texttt{TRUE} then computes the \textit{cumulative} probability.
+			\end{itemize}
+		\end{itemize}
 	\end{frame}
 	\begin{frame}
 		\frametitle{Cumulative Distribution}
+		\begin{itemize}
+			\item The Cumulative distribution is an \textit{accumulation} of all the probablities up to and including the probability last observed. 
+			\bigskip
+			\item Show yourself how the Cumulative Distribution feature works on BINOMDIST by testing how the probabilities change when using \texttt{TRUE} in BINOMDIST versus using \texttt{FALSE}. 
+		\end{itemize}
+	
+%		\begin{enumerate}
+%			\item compute the individual probabilities of observing 0 to 10 successes for an experiment in flipping fair coins. 
+%			\begin{enumerate}
+%				\item In Cells A1:C1 create column headers labeled `Successes', `Probability', `Cumulative'.
+%				\item in the `Successes' column, fill in the numbers from 0 to 10.
+%				\begin{itemize}
+%					\item Cell A2 should start at 0.
+%				\end{itemize} 
+%				\item in the `Probability' column, Compute the binomial probability using BINOMDIST(). 
+%				\begin{itemize}
+%					\item The first entry, Cell B2 should read \texttt{BINOMDIST(A2, 0.5, 10, 0.5, FALSE)}.
+%					\item use autofill to compute the successive probabilities.
+%				\end{itemize}  
+%			\end{enumerate}
+%		\end{enumerate}
 	\end{frame}
+\subsection{Exercise 3: Smokers}
 	\begin{frame}
 		\frametitle{Exercise 3: Smokers}
 		A local health department counsels patients coming to a clinic on cigarette smoking only if they are smokers. History has shown that about 27\% (i.e., 0.27) of patients are smokes when they first come to the clinic. Assume that the clinic will see 15 patients today.\\
@@ -269,6 +332,7 @@
 					\item 5 or fewer people are smokers.
 					\item between 7 and 10 people (inclusive) are smokers.
 				\end{itemize}
+			\item What is the \textit{Expected} number of smokers that come into the clinic?
 		\end{enumerate} 
 	\end{frame}
 	\begin{frame}
@@ -307,16 +371,61 @@
 		\includegraphics[width=0.9\textwidth]{Exercise3Soln.png}
 	\end{center}
 	\end{frame}
- 
+ \section{The Poisson Distribution}
 	\begin{frame}
 		\frametitle{The Poisson Distribution}
+		A Poisson model follows the same idea as the Binomial Model but instead of counting $k$-successes in a set of $n$-discrete trials, it counts the number of \textit{successes/arrivals} in a \textit{span of time/space} in the form of a rate, successes/arrivals per unit of time/space, $\lambda$. \\
+		%We can describe an experiment from a Binomial standpoint in the form of a Poisson model.
+		Suppose we are rolling a D20 die 100 times in  period $t$ seconds long. The probability of getting a Crit 20, is 1/20. for 100 rolls we Expect the rate to observe 5 Crit 20's. In a period of $t$ seconds we expect to see 5 crits.\\
+		To approximate a Binomial Model using a Poisson Model, we can say that:
 	\end{frame}
 	\begin{frame}
+		\frametitle{The Poisson Distribution: Continued}
+		\begin{itemize}
+			\item In a Binomial Model we would say $p = 0.05$, $n=100$, \\and $E[X] = np$. 
+			\item In a Poisson model we would say $\lambda =  5/t$ crits per second, 
+			\begin{itemize}
+				\item for a period length $t$,  $E[X] = \lambda t = 5$ crits every $t$ seconds.
+			\end{itemize}
+			\item for both, we are interested in computing the probability of finding $k$ or $x$ successes/arrivals. 
+		\end{itemize}
+	\end{frame}
+
+	\begin{frame}
 		\frametitle{The POISSON() Function}
+		POISSON computes the probability of $x$ successes for a given \textit{mean} rate of success, $\lambda$. (i.e., What is the probability two trains arrive in 10 minutes if their rate is typically 3 trains an hour)  The arguments/inputs are
+		\begin{itemize}
+			\item \texttt{x} : integer
+			\begin{itemize}
+				\item The number of arrivals/successes to be observed
+				\item Must be greater than or equal to 0.
+			\end{itemize}
+			\item \texttt{mean} : numeric
+			\begin{itemize}
+				\item The given rate of arrivals/successes. 
+				\item Must be greater than or equal to 0. 
+			\end{itemize}
+			\item \texttt{cumulative} : \texttt{TRUE} or \texttt{FALSE}
+			\begin{itemize}
+				\item if \texttt{FALSE} then computes the \textit{exact} probability.
+				\item if \texttt{TRUE} then computes the \textit{cumulative} probability.
+			\end{itemize}
+		\end{itemize}
 	\end{frame}
 	\begin{frame}
 		\frametitle{Example: Counting Train Arrivals}
+		Suppose I am watching trains at the 238\textsuperscript{th} St station. The schedule says the train arrives every 8 minutes, for a \textit{mean} rate of $\lambda=0.125$ trains per minute.Use POISSON() to compute the probabilities for the number of trains, \textit{x},  that can arrive in the next minute. 
+		\begin{center}
+			\begin{tabular}{l | l | l}
+				No. of Trains, $x$ & Computation & Result \\ 
+				\hline
+				$0$ &  \texttt{=POISSON(0, 0.125, FALSE)} & 0.8825\\
+				$1$ & \texttt{=POISSON(1, 0.125, FALSE)}& 0.1103\\
+				$\geq 1$ & \texttt{=1-POISSON(0, 0.125, FALSE)} & 0.1175  
+			\end{tabular}
+		\end{center}
 	\end{frame}
+\subsection{Exercise 4: Hospital Supply Quality Control}
 	\begin{frame}
 		\frametitle{Exercise 4: Hospital Supply Quality Control}
 		A hospital supply room manager found that on average about 2 gloves in a box are not usable.
@@ -335,7 +444,54 @@
 	\end{frame}
 	\begin{frame}
 		\frametitle{Exercise 4: Solution}
+		\begin{enumerate}
+			\item In cells A1:C1, write the column headers `No. of Defects', `Probability', `Cumulative'. 
+			\item Fill in integers from 0 to 10 in Cells A2:A12.
+			\item In cell B2, compute the probability for the given number of defects in A2. 
+			\begin{itemize}
+				\item Cell B2 should read: \texttt{=POISSON(A2, 2, FALSE)}
+			\end{itemize}
+			\item Use Autofill to compute the probabilities for each No. of defective gloves.
+			\item In Cell C2, compute the \textit{cumulative} probability for number of defects from 0 defects up \textit{through} the number of defects given in A2.
+			\begin{itemize}
+				\item Cell C2 should read: \texttt{=POISSON(A2, 2, TRUE)} 
+			\end{itemize}
+			\item Use Autofill to compute the successive cumulative probabilities in cells C3:C12.
+		\end{enumerate}
 	\end{frame}
+	\begin{frame}
+		\frametitle{Exercise 4: Solution (continued)}
+		\begin{enumerate}
+			\item Create a column chart of the probabilities and cumulative probabilities. 
+			Notes: 
+			\begin{itemize} 
+				\item There should only be two series', Probability and Cumulative.
+				\item The `Horizontal (Category)  axis label' should be a selection of the number of defects, in this case A2:A12
+			\end{itemize}
+		\item The Probabilities are computed in the table below:
+		\end{enumerate}
+		\begin{center}
+			\begin{tabular}{ l | c | l | l }
+				Case & Interpretation & Computation & Result \\
+				\hline
+				Only $1$& $P(X=1)$& \texttt{=POISSON(1, 2, FALSE)} & 0.2707 \\
+				 defect&&or See Cell B3&\\
+				 \hline
+				Fewer than& $P(X<5)$ & \texttt{=POISSON(4, 2, TRUE)} & 0.9473 \\
+				$5 $ defects &or $P(X\leq4)$& or See Cell C6& \\
+				\hline
+				At least $2$ & $P(X\geq2)$ or & \texttt{=1-POISSON(1, 2, TRUE)} & 0.5940\\
+				defects & $1-P(X\leq1)$ & or  \texttt{=1-C3}& 
+			\end{tabular}
+		\end{center}
+	\end{frame}
+	\begin{frame}
+		\frametitle{Exercise 4: Solution (continued)}
+		\begin{center}
+			\includegraphics[width=0.9\textwidth]{Exercise4Soln.png}
+		\end{center}
+	\end{frame}
+\section{Further Reading}
 	\begin{frame}
 		\frametitle{Further Reading}
 		The topics covered in the lecture can be found in \textit{Compter Applications for Life Sciences} p. 63 - 74.

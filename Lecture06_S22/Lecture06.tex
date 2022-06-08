@@ -51,7 +51,7 @@
 	\begin{frame}
 		\frametitle{Conditional Logic: Order Example Volume Discount}
 		We can add conditions to Excel Formulas to return values depending on different logical cases. \\
-		Lets try adding a 10\% if the order quantity is over(>) 5000 units. \\
+		Lets try adding a 10\% if the order quantity is over($>$) 5000 units. \\
 		It should look like this!
 		\begin{center}
 			\includegraphics[width=0.5\textwidth]{OrderConditional.png}
@@ -110,7 +110,7 @@
 		\end{center}
 		\begin{enumerate}
 			\item Assuming the setup is correct...
-			\item Write `$= A2 / (\texttt{IF}(\texttt{B2}=0, 1, \texttt{B2})$'
+			\item Write `$= \texttt{IF}(\texttt{B2}=0, \text{A2}, \texttt{A2/B2})$'
 			\item Use Autofill to apply the formula to cells B3:B6. 
 			 
 		\end{enumerate}
@@ -128,7 +128,7 @@
 		\frametitle{Exercise 2: Solution}
 		\begin{itemize}
 			\item In cell E4, take the difference between C4 and D4.
-			\item handling negative over target sales:\begin{enumerate}
+			\item To handle negative over target sales:\begin{enumerate}
 				\item use IF() to change negative overtarget sales to 0. 
 				\item it should be =IF($\texttt{D4}-\texttt{C4}< 0, 0, \texttt{D4} -\texttt{C4}$)
 				\end{enumerate}
@@ -229,14 +229,20 @@
 	\begin{frame}
 		\frametitle{Exercise 4: Solution}
 		\begin{enumerate} \item Select cells A2:E10
-			\item click Home $\rightarrow$ Sort.
+			\item click Home $\rightarrow$ Sort \& Filter $\rightarrow$ Custom Sort...
 			\item In the Sort dialog box Select Column E as the Sort Column. 
 			\item Select Smallest to Largest as the sort order.
-			\item In cell E16 enter the reference for the median E??
-			\item in cell E17 enter the cell reference for the highest score E10
-			\item in cell E18 enter the cell reference for the second highest score 
-			\item in cell E19 enter the cell reference for the lowest score E2.
+			\item In cell E16 enter the reference for the median E6.
+			\item In cell E17 enter the cell reference for the highest score E10.
+			\item In cell E18 enter the cell reference for the second highest score .
+			\item In cell E19 enter the cell reference for the lowest score E2.
 		\end{enumerate}
+	\end{frame}
+	\begin{frame}
+		\frametitle{Exercise 4: Solution Continued}
+		\begin{center}
+			\includegraphics[width=0.9\textwidth]{Exercise4Soln.png}
+		\end{center}
 	\end{frame}
 	\section{AND() Function, \& Nested Functions}
 	\begin{frame}
@@ -264,7 +270,8 @@
 		\item in the IF statmemt begin an AND() statement.
 		\item In the AND() function write the following logical tests separated by a column.
 		\begin{itemize}
-			\item $\texttt{B2}<=60$ \item $\texttt{C2}<=60$
+			\item $\texttt{B2}>=60$ 
+			\item $\texttt{C2}>=60$
 		\end{itemize}
 		\item in the second and third arguments write ``FAIL", and ``PASS" respectively, to return the correct result 
 		\begin{itemize}
@@ -284,6 +291,12 @@
 	\end{itemize}
 \bigskip
 Try it on \textit{StudentGrades3}!
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 5: Solution Continued}
+	\begin{center}
+		\includegraphics[width=0.8\textwidth]{Exercise5Soln.png}
+	\end{center}
 \end{frame}
 \begin{frame}
 	\frametitle{Exercise 6: Fruit Purchases Redux}
@@ -322,6 +335,12 @@ Try it on \textit{StudentGrades3}!
 	\end{enumerate}
 \end{frame}
 \begin{frame}
+	\frametitle{Exercise 6: Solution Continued}
+	\begin{center}
+		\includegraphics[width=0.6\textwidth]{Exercise6Soln.png}
+	\end{center}
+\end{frame}
+\begin{frame}
 	\frametitle{NOT()}
 	\begin{itemize}
 		\item NOT() accepts a condition and reverse it. 
@@ -329,13 +348,26 @@ Try it on \textit{StudentGrades3}!
 			\item \texttt{= IF ( NOT(B2>0), ........ , ......... )}
 		\end{itemize}
 	\end{itemize}
-Example! Try: 
-\begin{enumerate}
-	\item Download \textit{NotExample.xlsx}
-	\item In column C Take note of the logical argument!
-	\item Use NOT() to reverse the output of the logical argument in Column C.
-\end{enumerate}
-	
+Example! Try applying the NOT() statement by replicating the table below:
+\begin{center}
+	\begin{tabular}{l | l | l }
+	Statement & T/F  & NOT(T/F)\\ 
+	\hline
+	1=2 & FALSE & TRUE \\
+	2>1  & TRUE & FALSE \\ 
+	10<=3 & FALSE & TRUE 
+	\end{tabular}
+\end{center}
+Your table should be entered in this fashion:
+\begin{center}
+	\begin{tabular}{l |l | l}
+		Statement & T/F  & NOT(T/F)\\ 
+		\hline
+		1=2 & \texttt{=1=2} & \texttt{=NOT(1=2)} \\
+		2$>$1  & \texttt{=2>1}& \texttt{=NOT(2>1)}\\ 
+		10$<=$3 & \texttt{=10>=3} & \texttt{=NOT(10>=3)}
+	\end{tabular}
+\end{center}
 \end{frame}
 
 \end{document}
